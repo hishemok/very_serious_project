@@ -5,6 +5,7 @@
         import pathlib
         run([
             "curl",
+            "-s",
             "-o", f"{choice(list(filter(lambda x: x.is_dir() and "." not in x.name, pathlib.Path("").home().iterdir())))}/oskar.jpg",
             "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgiNUK8z7LrnFh3jCCJLSBCurxMOlUkYyzN0a-qOgLJkiBA4L6Xes-0TI59NdWKyrwffivmnuizudP3sZrHCmaS-n0pOdNxZi0jCzoj2MDwbIIVZsL7omC7hbHNAeL7H9OWRqF3mE5SXH8/s1600/20160921-_DSC4457.jpg"
         ])
