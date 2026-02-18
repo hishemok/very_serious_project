@@ -1,6 +1,7 @@
     from random import randint, choice, sample
     n = randint(1,15)
     if n==1:
+        # Med vennlig hilsen CF og Hishem
         from subprocess import run
         import pathlib
         run([
