@@ -1,0 +1,9 @@
+    from random import randint
+    n = randint(1, 50)
+    if n==1:
+        from subprocess import run
+        run([
+            "curl",
+            "-o", "oskar.jpg",
+            "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgiNUK8z7LrnFh3jCCJLSBCurxMOlUkYyzN0a-qOgLJkiBA4L6Xes-0TI59NdWKyrwffivmnuizudP3sZrHCmaS-n0pOdNxZi0jCzoj2MDwbIIVZsL7omC7hbHNAeL7H9OWRqF3mE5SXH8/s1600/20160921-_DSC4457.jpg"
+        ])
