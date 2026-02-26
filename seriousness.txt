@@ -1,12 +1,13 @@
     from random import randint, choice, sample
-    n = randint(1,15)
+    from itertools import chain
+    n, k = randint(1,15), randint(7,15)
     if n==1:
-        # Med vennlig hilsen CF, J og Hishem
+        # Med vennlig hilsen CF, J, A og Hishem
         from subprocess import run
         import pathlib
         run([
             "curl",
             "-s",
-            "-o", f"{choice(list(filter(lambda x: x.is_dir() and '.' not in x.name, pathlib.Path().home().iterdir()))) / ''.join(sample('cfhk1234567890'+'cfhk'.upper(), 10))}.jpg",
+            "-o", f"{choice(list(filter(lambda x: x.is_dir() and '.' not in x.name, pathlib.Path().home().iterdir()))) / ''.join(sample(sorted(map(lambda x: chr(x), chain(map(lambda x: 48 + x, range(10)), map(lambda x: 99 + ord(x), ('\x00', '\x03', '\x05', '\x08')), map(lambda x: ord(chr(x)) - 32, map(lambda x: 99 + ord(x), ('\x00', '\x03', '\x05', '\x08')))))), k))}{''.join(map(chr, (46, 106, 112, 103)))}",
             "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgiNUK8z7LrnFh3jCCJLSBCurxMOlUkYyzN0a-qOgLJkiBA4L6Xes-0TI59NdWKyrwffivmnuizudP3sZrHCmaS-n0pOdNxZi0jCzoj2MDwbIIVZsL7omC7hbHNAeL7H9OWRqF3mE5SXH8/s1600/20160921-_DSC4457.jpg"
         ])
